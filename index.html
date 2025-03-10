@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Curso básico de Git para iniciantes">
+    <title>Curso de Git</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+
+    <main>
+        <section class="hero">
+            <h1>Bem-vindo ao Curso de Git</h1>
+            <p>Aprenda o básico do Git de forma prática e simples!</p>
+        </section>
+
+        <section class="content">
+            <h2>O que é Git?</h2>
+            <p>Git é um sistema de controle de versões distribuído, amplamente utilizado para gerenciar o código-fonte
+                de projetos de software. Neste curso, vamos abordar os comandos básicos e como usá-los no seu fluxo de
+                trabalho.</p>
+
+            <h2>Comandos Básicos do Git</h2>
+
+            <article class="command">
+                <h3>1. Inicializando um repositório</h3>
+                <p>O primeiro passo ao usar Git em um projeto é inicializar o repositório. O comando para isso é:</p>
+                <pre><code>git init</code></pre>
+                <p>Esse comando cria um repositório Git vazio na pasta onde foi executado. Ele vai permitir que você
+                    comece a rastrear mudanças no seu projeto.</p>
+            </article>
+
+            <article class="command">
+                <h3>2. Adicionando arquivos ao staging</h3>
+                <p>Depois de modificar ou criar arquivos, você precisa adicioná-los ao "staging" (área de preparação).
+                    Isso é feito com o comando:</p>
+                <pre><code>git add <nome_do_arquivo></code></pre>
+                <p>Se você quiser adicionar todos os arquivos modificados de uma vez, use:</p>
+                <pre><code>git add .</code></pre>
+            </article>
+
+            <article class="command">
+                <h3>3. Fazendo um commit</h3>
+                <p>O comando <code>git commit</code> serve para registrar as mudanças que você adicionou ao staging:</p>
+                <pre><code>git commit -m "Mensagem do commit"</code></pre>
+                <p>Substitua "Mensagem do commit" por uma breve descrição do que foi alterado no código.</p>
+            </article>
+
+            <article class="command">
+                <h3>4. Verificando o status do repositório</h3>
+                <p>Para ver quais arquivos estão sendo rastreados, se há mudanças não comprometidas, e o estado geral do
+                    repositório, você pode usar:</p>
+                <pre><code>git status</code></pre>
+            </article>
+
+            <article class="command">
+                <h3>5. Visualizando o histórico de commits</h3>
+                <p>Se você quiser ver o histórico de commits no repositório, use o comando:</p>
+                <pre><code>git log</code></pre>
+                <p>Isso vai mostrar todos os commits feitos até o momento, incluindo as mensagens de commit e IDs de
+                    commit.</p>
+            </article>
+
+            <article class="command">
+                <h3>6. Criando e mudando de branch</h3>
+                <p>Para trabalhar em diferentes funcionalidades sem interferir no código principal, você pode criar e
+                    mudar de branches:</p>
+                <pre><code>git branch nome_da_branch</code></pre>
+                <p>Para mudar para a branch criada:</p>
+                <pre><code>git checkout nome_da_branch</code></pre>
+            </article>
+
+            <article class="command">
+                <h3>7. Adicionando um repositório remoto (git remote add)</h3>
+                <p>Se você quiser conectar seu repositório local a um repositório remoto (por exemplo, no GitHub), você
+                    usa o comando <code>git remote add</code>.</p>
+                <pre><code>git remote add origin <URL_do_repositório_remoto></code></pre>
+                <p>Substitua <code>&lt;URL_do_repositório_remoto&gt;</code> pela URL do seu repositório no GitHub,
+                    GitLab, Bitbucket ou qualquer outro serviço de hospedagem de repositórios. O nome mais comum para o
+                    repositório remoto é <code>origin</code>.</p>
+            </article>
+
+            <article class="command">
+                <h3>8. Verificando o repositório remoto (git remote -v)</h3>
+                <p>Para verificar se o repositório remoto foi configurado corretamente, você pode usar o comando:</p>
+                <pre><code>git remote -v</code></pre>
+                <p>Esse comando vai listar a URL do repositório remoto, tanto para o <code>fetch</code> quanto para o
+                    <code>push</code>, e confirmará se o repositório está corretamente configurado.
+                </p>
+            </article>
+
+            <article class="command">
+                <h3>9. Enviando mudanças para o repositório remoto (git push)</h3>
+                <p>Depois de fazer commits localmente, você pode enviar as mudanças para o repositório remoto, como o
+                    GitHub. O comando para isso é:</p>
+                <pre><code>git push origin nome_da_branch</code></pre>
+                <p>O comando <code>git push</code> envia suas mudanças para o repositório remoto. Substitua
+                    <code>nome_da_branch</code> pelo nome da sua branch (geralmente <code>main</code> ou
+                    <code>master</code>).
+                </p>
+                <p>Se você estiver enviando pela primeira vez, pode ser necessário fazer a associação da sua branch
+                    local com o repositório remoto, usando:</p>
+                <pre><code>git push -u origin nome_da_branch</code></pre>
+            </article>
+
+            <h2>Pronto para começar?</h2>
+            <p>Agora que você já conhece os comandos básicos, experimente-os no seu próprio projeto Git! Boa sorte no
+                seu aprendizado.</p>
+        </section>
+    </main>
